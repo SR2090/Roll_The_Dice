@@ -34,7 +34,6 @@ btnRoll.addEventListener("click", function () {
   if (dice !== 1) {
     currentScore += dice;
     // Start with player 1
-    activePlayer = 0;
     //TODO
     // current0EL.textContent = currentScore;
     // selecting dynamically current--0
@@ -43,12 +42,18 @@ btnRoll.addEventListener("click", function () {
     ).textContent = currentScore;
   } else {
     // 4. if true switch to next player
-    currentScore = 0;
+    // currentScore = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
+    currentScore = 0;
+    document.getElementById(
+      `current--${activePlayer}`
+    ).textContent = currentScore;
     //
     // Switch class
     player0EL.classList.toggle("player--active");
     player1EL.classList.toggle("player--active");
   }
 });
+
+// adding hold button functionality
+btnHold.addEventListener("click", function () {});
