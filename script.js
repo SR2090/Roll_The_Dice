@@ -93,3 +93,13 @@ btnHold.addEventListener("click", function () {
     }
   }
 });
+
+// implement resetting the game
+btnNew.addEventListener("click", function () {
+  // TODO
+  // Set playing = true
+  playing = true;
+  // Remove winner
+  // Reset current score
+  // Reset displayed score
+});
