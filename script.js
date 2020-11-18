@@ -12,6 +12,9 @@ const diceEL = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
+// Score and player
+const score = [0, 0];
+let activePlayer = 0;
 let currentScore = 0;
 // starting condition
 console.log(diceEL);
