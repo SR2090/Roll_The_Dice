@@ -72,7 +72,7 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       // Finish the game
       // Toggle playing
       playing = false;
@@ -100,6 +100,16 @@ btnNew.addEventListener("click", function () {
   // Set playing = true
   playing = true;
   // Remove winner
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove("player--winner");
+  // Reset all scores
+  scores[0] = 0;
+  scores[1] = 0;
   // Reset current score
+  document.getElementById(`current--${0}`).textContent = 0;
+  document.getElementById(`current--${1}`).textContent = 0;
   // Reset displayed score
+  document.getElementById(`score--${0}`).textContent = 0;
+  document.getElementById(`score--${1}`).textContent = 0;
 });
