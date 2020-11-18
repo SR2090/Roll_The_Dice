@@ -13,7 +13,7 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 // Score and player
-const score = [0, 0];
+const scores = [0, 0];
 let activePlayer = 0;
 let currentScore = 0;
 // Refactoring switchPlayer logic
@@ -55,6 +55,7 @@ btnRoll.addEventListener("click", function () {
       `current--${activePlayer}`
     ).textContent = currentScore;
   } else {
+    switchPlayer();
   }
 });
 
@@ -63,10 +64,12 @@ btnHold.addEventListener("click", function () {
   // TODO
   // 1. Add current score to active player score
   scores[activePlayer] += currentScore;
+  console.log(scores[activePlayer]);
   // scores[1] += currentScore
-  document.getElementById(`current--${activePlayer}`).textContent =
+  document.getElementById(`score--${activePlayer}`).textContent =
     scores[activePlayer];
   // 2. Check if player's score is >= 100
   // Finish the game
   // switch player
+  switchPlayer();
 });
