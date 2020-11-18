@@ -44,6 +44,7 @@ btnRoll.addEventListener("click", function () {
     const dice = Math.trunc(Math.random() * 6) + 1;
     // console.log(dice);
     // 2. display dice
+    // BUG
     diceEL.classList.remove("hidden");
     diceEL.src = `dice-${dice}.png`;
     // 3. check for 1
@@ -72,7 +73,7 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 20) {
       // Finish the game
       // Toggle playing
       playing = false;
