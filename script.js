@@ -51,7 +51,6 @@ btnRoll.addEventListener("click", function () {
     if (dice !== 1) {
       currentScore += dice;
       // Start with player 1
-      //TODO
       // current0EL.textContent = currentScore;
       // selecting dynamically current--0
       document.getElementById(
@@ -78,6 +77,7 @@ btnHold.addEventListener("click", function () {
       // Toggle playing
       playing = false;
       // hide the dice
+      // BUG
       diceEL.classList.add("hidden");
       // selecting the player
       // and removing the active class
